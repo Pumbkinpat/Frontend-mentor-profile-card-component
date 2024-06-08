@@ -1,0 +1,109 @@
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+
+/* reset css*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variable declaration */
+:root {
+    --clr-primary-Dark_cyan: hsl(185, 75%, 39%);
+    --clr-primary-Very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --clr-primary-Dark_grayish_blue: hsl(227, 10%, 46%);
+    --clr-neutral-Dark_gray: hsl(0, 0%, 59%);
+
+    --fs: 18px;
+}
+
+body {
+    min-height: 100vh;
+    /* start flex box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* end flex box */
+
+    background: 
+        url('./images/bg-pattern-top.svg'),
+        url('./images/bg-pattern-bottom.svg')
+        var(--clr-primary-Dark_cyan);
+    background-repeat: no-repeat;
+    background-position: top -489px left -300px, bottom -489px right -300px ;
+    font-family: 'Kumbh Sans', system-ui;
+}   
+
+.profile-card {
+    width: 420px;
+    height: 480px;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.profile-card .header {
+    height: 200px;
+    border-radius: 16px 16px 0 0;
+    background: url('./images/bg-pattern-card.svg');
+    position: relative;
+}
+
+.profile-card .header .profile-image {
+    width: 120px;
+    height: 120px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: 
+        url('./images/image-victor.jpg') 
+        no-repeat
+        top / cover;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.profile-card .info {
+    color: var(--clr-neutral-Dark_gray);
+    margin-top: 80px;
+    text-align: center;
+}
+
+.profile-card .info h2 {
+    color: var(--clr-primary-Very_dark_desaturated_blue);
+    margin-bottom: 16px;
+}
+
+.profile-card .info h2 span {
+    color: var(--clr-primary-Dark_grayish_blue);
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+hr {
+    height: 0.1px;
+    background-color: var(--clr-neutral-Dark_gray);
+}
+
+.profile-card .stats {
+    padding: 30px 45px 0 45px;
+    margin-top: 22px;
+    text-align: center;
+}
+    
+.profile-card .stats .stat {
+    display: inline-block;
+    width: 100px;
+    color: var(--clr-neutral-Dark_gray);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.profile-card .stat h2 {
+    color: var(--clr-primary-Very_dark_desaturated_blue);
+    letter-spacing: 0;
+}
